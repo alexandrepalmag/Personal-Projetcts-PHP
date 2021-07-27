@@ -8,12 +8,13 @@ require "../bootstrap.php";
 
 $routes = [
     '/' => 'controllers/index',
+    '/about' => 'controllers/about',
 ];
 
 $uri = Uri::load();
 
 require Routes::load($routes, $uri);
 
-$layout = new Layout;
+extract($layout->getData());
 
 require $layout->master('layout');

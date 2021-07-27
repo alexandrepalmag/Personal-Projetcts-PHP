@@ -6,6 +6,7 @@ class Layout
 {
 
     private $view;
+    private array $data = [];
 
     public function add($view)
     {
@@ -13,10 +14,28 @@ class Layout
         $this->view = $view;
     }
 
+    public function setData($data)
+    {
+        $this->data = $data;
+    }
+
+    public function getData()
+    {
+        return $this->data;
+    }
+
     public function load()
     {
 
-        return "..app/views/{$this->view}.php";
+        return "../app/views/{$this->view}.php";
+    }
+
+    public function loadData($data)
+    {
+
+        $loadData = $this->data = $data;
+
+        return (object) $loadData;
     }
 
     public function master($master)
