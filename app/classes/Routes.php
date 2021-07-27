@@ -16,6 +16,6 @@ class Routes
             throw new Exception("The route {$uri} does not exist!");
         }
 
-        return "../app/{$routes[$uri]}";
+        return "../app/{$routes[$uri]}.php";
     }
 }
