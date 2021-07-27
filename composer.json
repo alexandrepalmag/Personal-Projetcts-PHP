@@ -1,0 +1,15 @@
+{
+    "name": "acer/website_routes",
+    "autoload": {
+        "psr-4": {
+            "app\\": "app"
+        }
+    },
+    "authors": [
+        {
+            "name": "alexandrepalmag",
+            "email": "alepalmag85ti@gmail.com"
+        }
+    ],
+    "require": {}
+}
